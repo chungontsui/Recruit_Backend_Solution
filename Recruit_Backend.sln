@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.Data", "Recruit.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.Repository", "Recruit.Repository\Recruit.Repository.csproj", "{F062EF6B-21AD-414B-B274-095F191F6E2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit.Test", "Recruit.Test\Recruit.Test.csproj", "{3B3A89DB-1207-4FBF-90EA-E904096B87BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F062EF6B-21AD-414B-B274-095F191F6E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F062EF6B-21AD-414B-B274-095F191F6E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F062EF6B-21AD-414B-B274-095F191F6E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3A89DB-1207-4FBF-90EA-E904096B87BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3A89DB-1207-4FBF-90EA-E904096B87BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3A89DB-1207-4FBF-90EA-E904096B87BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3A89DB-1207-4FBF-90EA-E904096B87BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
