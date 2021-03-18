@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Recruit.Data.Model;
 
 namespace Recruit.Repository
@@ -19,8 +20,29 @@ namespace Recruit.Repository
 		}
 
 		public void AddCustomerDetail(CustomerDetail customerDetail)
-		{
-			_context.customerDetails.Add(customerDetail);
+		{ 
+			if(string.IsNullOrEmpty(Regex.Match(customerDetail.CreditCard, @"^\d*$").Value))
+			{
+				throw new Exception("Invalid Credit Card Number");
+			}
+
+			if(string.IsNullOrEmpty(Regex.Match(customerDetail.CVC, @"^\d*$").Value))
+			{
+				throw new Exception("Invalid CVC Number");
+			}
+
+			customerDetail.CreditCard = Helper.MaskingCCNumber(customerDetail.CreditCard);
+
+			try
+			{
+				_context.customerDetails.Add(customerDetail);
+				_context.SaveChanges();
+			}
+			catch (Exception e)
+			{
+				//Logging
+				throw new Exception("Error Adding New Customer Details", e);
+			}
 		}
 
 		public CustomerDetail GetCustomerDetailById(int id)
